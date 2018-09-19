@@ -46,8 +46,8 @@ export default class Done extends React.Component {
           renderItem={({ item }) => (
             <ListItem
               task={item}
-              toggleCheck={() => this.props.screenProps.toggleCheck}
-              deleteTask={() => this.props.screenProps.deleteTask}
+              toggleCheck={this.props.screenProps.toggleCheck}
+              deleteTask={this.props.screenProps.deleteTask}
             />
           )}
           keyExtractor={(item, index) => item.id}
