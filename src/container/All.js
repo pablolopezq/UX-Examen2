@@ -10,6 +10,10 @@ export default class All extends React.Component {
     this.state = {};
   }
 
+  handleOpen = () => {
+    this.props.navigation.openDrawer();
+  };
+
   handleAdd = dialog => {
     this.props.screenProps.showDialog(dialog);
   };
@@ -24,7 +28,7 @@ export default class All extends React.Component {
               name="bars"
               size={15}
               backgroundColor="transparent"
-              onPress={() => this.props.navigation.openDrawer()}
+              onPress={() => this.handleOpen()}
             />
           }
           centerComponent={{ text: "ToDo", style: { color: "#fff" } }}
